@@ -16,6 +16,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Basic Player Movement
+        float horizontalMovement = Input.GetAxisRaw("Horizontal");
+        float verticalMovement = Input.GetAxisRaw("Vertical");
+        playerRigidBody.velocity = new Vector2(horizontalMovement, verticalMovement);
+
     }
 }

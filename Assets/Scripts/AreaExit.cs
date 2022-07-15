@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AreaExit : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,7 @@ public class AreaExit : MonoBehaviour
         
     }
 
+    //Triggers the level area change when the player walks over Area Exit
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if(other.CompareTag("Player"))

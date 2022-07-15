@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] Rigidbody2D playerRigidBody;
     [SerializeField] Animator playerAnimator;
+    [SerializeField] int moveSpeed = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class Player : MonoBehaviour
         //Basic Player Movement
         float horizontalMovement = Input.GetAxisRaw("Horizontal");
         float verticalMovement = Input.GetAxisRaw("Vertical");
-        playerRigidBody.velocity = new Vector2(horizontalMovement, verticalMovement);
+        playerRigidBody.velocity = new Vector2(horizontalMovement, verticalMovement) * moveSpeed;
 
         //sets the player animation based on movement direction and idle direction
         playerAnimator.SetFloat("movementX", playerRigidBody.velocity.x);

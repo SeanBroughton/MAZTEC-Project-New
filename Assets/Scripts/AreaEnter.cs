@@ -5,7 +5,7 @@ using UnityEngine;
 public class AreaEnter : MonoBehaviour
 {
 
-    [SerializeField] string areaToEnterName;
+    public string areaToEnterName;
 
     // Start is called before the first frame update
     void Start()

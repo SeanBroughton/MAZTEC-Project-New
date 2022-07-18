@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
 
     public static Player instance;
+    public string playerCurrentArea;
 
     [SerializeField] Rigidbody2D playerRigidBody;
     [SerializeField] Animator playerAnimator;

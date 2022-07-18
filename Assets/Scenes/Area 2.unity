@@ -215,6 +215,18 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1682042488411687783, guid: ec7fe710d5a6f8740ae3acf9b13c33ce, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129612670561029624, guid: ec7fe710d5a6f8740ae3acf9b13c33ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129612670561029631, guid: ec7fe710d5a6f8740ae3acf9b13c33ce, type: 3}
+      propertyPath: areaToEnterName
+      value: Area 2 - Level 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6910093294500593101, guid: ec7fe710d5a6f8740ae3acf9b13c33ce, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -266,6 +278,10 @@ PrefabInstance:
     - target: {fileID: 6910093294500593103, guid: ec7fe710d5a6f8740ae3acf9b13c33ce, type: 3}
       propertyPath: sceneToLoad
       value: Area 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6910093294500593103, guid: ec7fe710d5a6f8740ae3acf9b13c33ce, type: 3}
+      propertyPath: areaToTransitionTo
+      value: Area 1 - Level 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

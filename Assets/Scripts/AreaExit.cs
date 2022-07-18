@@ -7,10 +7,11 @@ public class AreaExit : MonoBehaviour
 {
 
     [SerializeField] string sceneToLoad;
+    [SerializeField] string areaToTransitionTo;
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -23,6 +24,7 @@ public class AreaExit : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            Player.instance.playerCurrentArea = areaToTransitionTo;
             SceneManager.LoadScene(sceneToLoad);
         }
     }

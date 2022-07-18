@@ -5,16 +5,29 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
+    public static Player instance;
+
     [SerializeField] Rigidbody2D playerRigidBody;
     [SerializeField] Animator playerAnimator;
     [SerializeField] int moveSpeed = 1;
 
     void Start()
     {
+        //Creates a singleton pattern to have only one player
+        if(instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+
+        //Stops the player from being deleted when moving between scenes
         DontDestroyOnLoad(gameObject);
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Basic Player Movement
@@ -22,7 +35,7 @@ public class Player : MonoBehaviour
         float verticalMovement = Input.GetAxisRaw("Vertical");
         playerRigidBody.velocity = new Vector2(horizontalMovement, verticalMovement) * moveSpeed;
 
-        //sets the player animation based on movement direction and idle direction
+        //Sets the player animation based on movement direction and idle direction
         playerAnimator.SetFloat("movementX", playerRigidBody.velocity.x);
         playerAnimator.SetFloat("movementY", playerRigidBody.velocity.y);
         if(horizontalMovement == 1 || horizontalMovement == -1 || verticalMovement == 1 || verticalMovement == -1)
